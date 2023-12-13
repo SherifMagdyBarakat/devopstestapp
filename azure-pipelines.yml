@@ -36,3 +36,10 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - task: PublishBuildArtifacts@1
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    appType: 'webApp'
+    WebAppName: 'sherifacccusmvision2023'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
