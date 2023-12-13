@@ -42,4 +42,7 @@ steps:
     ConnectionType: 'AzureRM'
     appType: 'webApp'
     WebAppName: 'sherifacccusmvision2023'
+    deployToSlotOrASE: true
+    ResourceGroupName: 'testgroup'
+    SlotName: 'production'
     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
