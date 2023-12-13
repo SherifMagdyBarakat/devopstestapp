@@ -45,4 +45,3 @@ steps:
     azureSubscription: '4bd4eafa-57be-4877-885c-17ba12f0e643'
     deployToSlotOrASE: true
     ResourceGroupName: 'testgroup'
-    packageForWindows:'$(System.DefaultWorkingDirectory)/**/*.zip'
