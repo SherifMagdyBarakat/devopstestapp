@@ -26,7 +26,7 @@ steps:
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
+    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=trDesktopBuildPackageLue /p:SkipInvalidConfigurations=true /p:ocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
     platform: 'Windows'
     configuration: '$(buildConfiguration)'
 
@@ -37,11 +37,3 @@ steps:
 
 - task: PublishBuildArtifacts@1
 
-- task: AzureRmWebAppDeployment@4
-  inputs:
-    ConnectionType: 'AzureRM'
-    appType: 'webApp'
-    WebAppName: 'sherifacccusmvision2023'
-    azureSubscription: '4bd4eafa-57be-4877-885c-17ba12f0e643'
-    deployToSlotOrASE: true
-    ResourceGroupName: 'testgroup'
